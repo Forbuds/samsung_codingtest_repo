@@ -1,5 +1,11 @@
 """
+[중력 적용하기]
 풀이시간 : 1시간 13분
+1. 중력 적용하는 방법은 2가지가 있다. 새로운 그리드 + 마지막 위치 OR 기존 그리드 + 빈칸 갯수
+
+[실수]
+- 기준점 찾는 부분에서 약간 헤맸다. 시작점이 기준점이 될 기회를 빠트렸다.
+- 색깔 폭탄의 조건이 2개 이상인데 2개면 묶음이 안되게 만들어놨었다.
 """
 from typing import List
 from collections import deque
@@ -97,7 +103,7 @@ def find_bomb_set() -> List[int]:
 
 def explode(row, col) -> None:
     """
-    터트릴 폭탄 묶음의 한 위치를 받아와서 BFS를 돌며 ㅊ터트린다.
+    터트릴 폭탄 묶음의 한 위치를 받아와서 BFS를 돌며 터트린다.
     :param row: 행
     :param col: 열
     :return:
