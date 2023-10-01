@@ -1,3 +1,6 @@
+"""
+풀이 시간 : 40분
+"""
 from collections import deque
 
 N = int(input())
